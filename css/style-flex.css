@@ -1,0 +1,292 @@
+* {
+	font-family: Arial, Verdana, sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+aside h2 {text-align: left;}
+
+
+#cabecera {
+	height: 60px;
+	background-color: black;
+	color: white;
+	border-bottom: 2px solid red;
+	padding: 20px;
+	text-align: right;
+}
+
+#logo-fondo {
+	padding: 100px;
+	background-position: center;
+	background-image: url(../img/deadpool-desktop.jpg);
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+}
+
+#caja-centrada {
+	padding: 10px;
+	border: 2px solid red;
+	margin-bottom: 20%;
+	box-shadow: 10px 10px 10px 1px;
+	text-align: center;
+}
+
+
+#menu {
+text-align:center;
+width: 100%;
+height: auto;
+min-height: 40px;
+padding: 15px 10px 15px 0px;
+margin: 0 auto;
+background-color: black;
+}
+
+#menu ul {
+list-style-type: none;
+}
+
+
+#menu ul li a {
+display: inline-block;
+
+text-decoration: none;
+list-style-type: none;
+color: black;
+background-color: lightgray;
+padding: 8px 25px;
+
+transition: background-color 0.3s linear;
+}
+
+#menu ul li a:hover {
+color: white;
+background-color: red;
+}
+
+#menu ul li {
+	display: inline-block;
+	border: 1px solid black;
+	padding: 10px;
+	position: relative;
+}
+
+#menu ul li ul {
+	display: none;
+	padding: 30px;
+	list-style-type: none;
+}
+
+#menu ul li:hover {
+	cursor: pointer;
+
+}
+
+#menu ul li:hover ul {
+	display: block;
+	position: absolute;
+	left:-20px;
+	top: 15px;
+	list-style-type: none;
+
+}
+
+#menu ul li ul li  {
+	padding:10px;
+	z-index: 2000;
+}
+
+#menu ul li:hover ul li {
+	display: block;
+	background-color: lightgray;
+	z-index: 1000;
+
+}
+
+.fontawesome-iconos {
+	margin-left: 40px;
+}
+
+.padre-flex { /*Este contenedor contiene a lateral-izquierdo (about) y central-derecho (deadpool+cable+3 fotos)*/
+	display: flex;
+	width: 100%;
+	height: auto;
+	/*background-color: lightblue;*/
+	/*border: 3px solid green;*/
+	position: relative; /*Tanto la posición relativa como absoluta (que es la que recomendó Pedro) me ha servido para hacer que lateral-izquierdo y central-derecho no se monten uno encima del otro junto con otras órdenes más abajo*/
+	
+
+}
+
+.lateral-izquierdo {
+	width: 20%;
+	height: 100%; /*Height:100%, position absolute/relative en padre-flex y position absolute aquí han hecho que el contenedor lateral se estire hasta abajo, respetando en tod momento la proporción al disminuir el tamaño del navegador*/
+	position: absolute; /*Aquí he tenido que ponerle posición absoluta según el consejo de Pedro; si la quitara, dejaría de funcionar y el contenedor lateral-izquierdo se haría más pequeño*/
+	background-color: lightgray;
+	padding: 10px;
+	/*border: 2px solid red;*/
+
+}
+
+.img-about {
+	width: 70%;
+	margin-left: 12%;
+	border-style: ridge;
+	margin-bottom: 10%;
+	
+}
+
+.RSS {
+	text-align: center;
+	line-height: 2em;
+	margin-top: 20%;
+
+}
+
+.central-derecho {
+	width: 80%;
+	height: auto;
+	z-index: 0;
+	display:flex;
+	flex-direction: column;
+	margin-left: 20%; /*Al añadirle margen izquierdo a este contenedor, evito que se monte
+	/*border:2px solid blue;*/
+
+	
+	
+	
+}
+
+.deadpool-cable {
+	padding: 5px;
+	margin: 1px;
+	/*border:2px solid red;*/
+
+}
+
+.texto-columna {
+	column-count: 2;
+	column-rule-style: dotted;
+	column-rule-color: red;
+	margin: 5px;
+}
+
+.texto {
+	position: relative;
+	padding: 5px;
+}
+
+.leer-mas {
+	border: 1px solid black;
+	width: 100px;
+	height: 15px;
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+	margin-left: 80%;
+	margin-top:1%;
+	
+}
+
+
+.hijo-principal {
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 5px;
+	/*border: 3px solid red;*/
+	
+}
+
+.imagenes {
+	padding: 2%;
+	margin: 1%;
+	width: 35%;
+	height: auto;
+	text-align: center;
+	/*border: 2px solid orange;*/
+	
+}
+
+#footer-web {
+	width: 100%;
+	height: 60px;
+	background-color: black;
+	border-top: 2px solid red;
+	padding: 20px;
+	text-align: center;
+	color: white;
+}
+
+@media screen and (max-width: 600px) {
+
+#caja-centrada {
+	width: 200px;
+	height: 120px;
+	background-color: black;
+	color: white;
+	margin-top:10px;
+
+}
+
+#menu ul li a {
+display: inline-block;
+text-decoration: none;
+list-style-type: none;
+color: black;
+background-color: lightgray;
+padding: 8px 10px;
+transition: background-color 0.3s linear;
+}
+
+#menu ul li  {
+	padding:1px;
+
+}
+
+#menu ul li:hover ul {
+	display: block;
+	position: absolute;
+	left:-30px;
+	top: 5px;
+	list-style-type: none;
+
+}
+
+.lateral-izquierdo {
+	min-width: 20%;
+	height: 100%; 
+	background-color: lightgray;
+	padding: 10px;
+}
+
+.central-derecho {
+	min-width: 80%;
+	height: auto;
+	z-index: 0;
+	display:flex;
+	flex-direction: column;
+	margin-left: 20%;
+	}
+
+
+.hijo-principal {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0 auto;
+
+}
+ h2 a {text-align: center;}
+
+.imagenes {
+	min-width: 100%;
+	text-align: center;
+	/*border: 2px solid orange;*/
+}
+
+}
